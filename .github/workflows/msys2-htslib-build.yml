@@ -12,7 +12,7 @@ on:
       - 'scripts/**'
   workflow_dispatch:
 env:
-  PACKAGE_VERSION: 1.17
+  PACKAGE_VERSION: 1.18
   LIBHTS_SOVERSION: 3
   RELEASE_VERSION: 0 # equivalent to conda build number
 jobs:
