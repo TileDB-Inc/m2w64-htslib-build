@@ -2,12 +2,13 @@
 
 The workflow [msys2-htslib-build.yml][] builds a statically linked[^explanation] htslib.dll
 under msys2. See the [releases][] to download the tarball. To build a different
-version of htslib, update the env var `PACKAGE_VERSION`. To build an updated
+version of [htslib][], update the env var `PACKAGE_VERSION`. To build an updated
 release of an existing version, update the env var `RELEASE_VERSION`. Also, make
 sure that `RELEASE_VERSION` is reset to 0 when bumping the version.
 
 [msys2-htslib-build.yml]: https://github.com/TileDB-Inc/m2w64-htslib-build/blob/main/.github/workflows/msys2-htslib-build.yml
 [releases]: https://github.com/TileDB-Inc/m2w64-htslib-build/releases
+[htslib]: https://github.com/samtools/htslib
 
 The release tarball is subsequently consumed by
 [TileDB-Inc/m2w64-htslib-feedstock][], which repackages the pre-built files into
