@@ -18,3 +18,6 @@ pacman -S --noconfirm --needed \
   mingw-w64-x86_64-curl \
   mingw-w64-x86_64-tools-git \
   mingw-w64-x86_64-libdeflate
+
+pacman -Q
+pacman -Ss curl
