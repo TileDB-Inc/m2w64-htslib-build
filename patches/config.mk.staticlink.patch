@@ -17,7 +17,7 @@
 ---
 > LIBCURL_LIBS = $(MSYSTEM_PREFIX)/lib/libcurl.a
 83c93
-< CRYPTO_LIBS = -lcrypto
+< CRYPTO_LIBS = 
 ---
 > CRYPTO_LIBS = $(MSYSTEM_PREFIX)/lib/libcrypto.a
 114a125,144
