@@ -1,4 +1,4 @@
-set -eu
+set -eux
 
 PATCH_DIR="$1"
 
@@ -8,7 +8,7 @@ LIBHTS_SOVERSION=${LIBHTS_SOVERSION-3}
 mv config.mk config.mk.libcurl
 ./configure --disable-libcurl
 cat config.mk
-diff config.mk config.mk.libcurl
+cat config.mk.libcurl
 
 # apply patches
 patch Makefile "${PATCH_DIR}/makefile.staticlink.patch"
