@@ -1,6 +1,8 @@
 name: Build a statically linked htslib.dll under msys2
 on:
   push:
+    branches:
+      - main
     paths:
       - '.github/workflows/msys2-htslib-build.yml'
       - 'patches/**'
