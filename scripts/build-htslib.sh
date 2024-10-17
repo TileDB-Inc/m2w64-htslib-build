@@ -7,7 +7,6 @@ LIBHTS_SOVERSION=${LIBHTS_SOVERSION-3}
 ./configure --disable-libcurl
 
 # apply patches
-patch Makefile "${PATCH_DIR}/makefile.staticlink.patch"
 patch config.mk "${PATCH_DIR}/config.mk.staticlink.patch"
 patch htslib/hts_defs.h "${PATCH_DIR}/htslib/hts_defs.h.staticlink.patch"
 
