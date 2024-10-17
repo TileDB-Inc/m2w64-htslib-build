@@ -10,6 +10,13 @@ then
   exit 1
 fi
 
+if [[ -z "$GIT_REF" ]]
+then
+  echo "The env var GIT_REF is missing"
+  echo "Please define it as the reference to the commit to make the release on"
+  exit 1
+fi
+
 PACKAGE_VERSION=${PACKAGE_VERSION-1.15.1}
 RELEASE_VERSION=${RELEASE_VERSION-0}
 FULL_VERSION=${PACKAGE_VERSION}-${RELEASE_VERSION}
@@ -22,5 +29,6 @@ then
   gh release create ${FULL_VERSION} \
     --notes ${FULL_VERSION} \
     --title ${FULL_VERSION} \
+    --target ${GIT_REF} \
     m2w64-htslib-${FULL_VERSION}.tar.gz
 fi
