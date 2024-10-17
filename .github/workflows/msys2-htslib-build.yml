@@ -58,7 +58,7 @@ jobs:
   release:
     name: release
     needs: build
-    if: github.repository == 'TileDB-Inc/m2w64-htslib-build' &&  github.event_name != 'pull_request'
+    if: github.repository_owner == 'TileDB-Inc' &&  github.event_name == 'push'
     runs-on: ubuntu-latest
     permissions:
       contents: write
